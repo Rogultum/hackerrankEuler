@@ -1,0 +1,9 @@
+def pf(n):
+    i = 2
+    while i * i <= n:
+        while not n % i:
+            n = n // i
+            if n == i:  # if n is a perfect prime square like 25, 49...
+                break
+        i += 1 if i == 2 else 2
+    return n
